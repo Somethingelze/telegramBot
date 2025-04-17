@@ -1,3 +1,15 @@
-bot.name=some_currency_Bot
-bot.token=7308215237:AAGMRfP7-B2ITjuC0ZbSj-EOS0SmejfMCnM
-api.AccessKey= 080c34b394ca1f7f8d5fd999b85071dc
+bot:
+  url: www
+  name: some_strange_longpollingbot
+  token: ${BOT.TOKEN}
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DB.URL}
+    username: ${DB.USER}
+    password: ${DB.PASSWORD}

@@ -2,18 +2,13 @@ package org.some.telegram_bot.service;
 
 
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 @Service
-public class TelegramBot extends TelegramLongPollingBot {
-    @Override
-    public void onUpdateReceived(Update update) {
+public class UpdateDispatcher {
 
-    }
-
-    @Override
-    public String getBotUsername() {
-        return "";
+    public BotApiMethod<?> distribute(Update update) {
+        throw new UnsupportedOperationException();
     }
 }
